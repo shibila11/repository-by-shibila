@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: netflix-sans;
+            src: url("./fonts/netflix-sans-font/NetflixSans-Bold.otf");
+        }
+
+        body {
+            margin: 0;
+            font-family: netflix-sans;
+        }
+
+        .container {
+            margin: 0;
+            background-image: url(./imges/bg-img.jpg);
+            opacity:100;
+            width:100vw;
+            height: 120vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-size: large;
+            
+            display: grid;
+            grid-template-columns: 9% auto 9%;
+            grid-template-rows: 100px auto 100px;
+            grid-template-areas: ". nav ."
+                ". mid ."
+                "lst lst lst";
+          
+        }
+        
+       
+
+        .item {
+            /* background-color: aqua; */
+            grid-area: nav;
+
+
+        }
+
+        .item-a {
+            display: flex;
+            height: 100px;
+            /* background-color: rgb(15, 69, 117); */
+            justify-content: space-between;
+            border: 0;
+
+
+
+
+        }
+
+        .item-b {
+            /* background-color: black; */
+            height: 100px;
+            width: 100;
+            height: 300px;
+            color: aliceblue;
+            grid-area: mid;
+
+
+
+        }
+
+        .logo {
+            height: 48px;
+            padding-top: 10px;
+            padding-left: 6px;
+            scale: 1.1;
+
+        }
+
+        select {
+            width: 90px;
+            height: 35px;
+            font-size: 16px;
+            border-radius: 5px 5px 5px 5px;
+            padding-left: 10px;
+            padding-right: 0;
+            background-color: black;
+            color: aliceblue;
+            border: 0;
+
+        }
+
+        select:focus {
+            border: 0;
+            outline: 0;
+        }
+
+
+        .button1{
+            height: 35px;
+            background-color: red;
+            border-color: transparent;
+            color: aliceblue;
+            font-size: 16px;
+            border-radius: 5px 5px 5px 5px;
+
+        }
+
+        h1 {
+            font-size: 40px;
+
+        }
+
+        /* -------------------------------------------------------------------------------------------------- */
+        .select-option {
+            display: inline-flex;
+            height: fit-content;
+            background-color: black;
+            align-items: center;
+            padding-left: 10px;
+            border-radius: 6px 6px 6px 6px;
+
+        }
+
+        .select-option:focus-within {
+            outline: 2px solid wheat;
+        }
+
+        #translate {
+            height: 20px;
+        }
+
+        .translate-area {
+            display: inline-flex;
+            height: fit-content;
+            gap: 6px;
+            margin-right: 4px;
+            padding-top: 20px;
+        }
+
+        /* --------------------------------------grid-row-2-------------------------------------------------------- */
+        .item-b {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            margin-top: 50px;
+            height: fit-content;
+        }
+
+        .item-b h1 {
+            margin: 0%;
+            text-align: center;
+        }
+
+        .item-b h4 {
+
+            text-align: center;
+        }
+
+        .item-b h3 {
+            text-align: center;
+        }
+
+        /* email and get started */
+        .email-section {
+            display: flex;
+            flex-direction: row;
+            height: fit-content;
+            /* outline: 2px solid blue; */
+            gap: 10px;
+            align-content: center;
+
+        }
+
+        .eml {
+            height: 50px;
+            width: 336px;
+            color: black;
+            outline: 1.5px solid white;
+            font-size: 16px;
+            border-radius: 5px 5px 5px 5px;
+            background-color: black;
+            opacity:90%;
+            border: 0;
+
+        }
+        .eml:focus::placeholder{
+            transform: translate(-30px,-10px) scale(0.7);
+
+        }
+        .eml:focus{
+            outline: 2px solid white;
+            outline-offset: 2px;
+        }
+
+        .bttn {
+            height: 50px;
+            border-color: transparent;
+             width:181px;
+            font-size: 16px;
+            border-radius: 5px 5px 5px 5px;
+            border: 0;
+
+
+        }
+        .bttn::after{
+            content:">";
+            padding-left:15px;
+        }
+        /* trending section */
+        .trend{
+            display: flex;
+            flex-direction: row;
+            justify-items: flex-start;
+            background-color:indigo;
+            height: 100px;
+            width: 100vw; 
+            grid-area:lst;
+            font-size: 24px;
+            border-radius: 49% 49% 0 0;
+            border-top:4px solid red;
+            background: radial-gradient(ellipse at 50% 20%,rgba(255, 255, 255, 0.233) 10%,rgba(0, 0, 0, 0.841) 30%, black 100%       );
+            
+
+
+        }
+        /* .trend::before{
+            content:"";
+            position: absolute;
+            inset:0;
+            border:6px solid transparent;
+            border-image:linear-gradient(to right,transparent 0%,red);
+            background-color: transparent ;
+        } */
+        .trend h1{
+            font-size: 25px;
+            padding-top: 40px;
+       color: white;
+      transform: translate(-400px ,0 );
+        }
+        /* flex-setion */
+         .parent-flex{
+            background-color:black;
+            padding: 30px;
+            display: flex;
+            flex-wrap:nowrap;
+            /* in row */
+            justify-content:space-around; 
+            /* in columns */
+            align-content:space-around;
+            gap: 50px;
+            height: 400px;
+            overflow: scroll;
+
+
+        }
+        .flex1{
+            background-color: aliceblue;
+            border:2px solid black;
+            width: 100px;
+            height: 100px;
+            align-content: center;
+            padding: 40px;
+             transition: transform 1s;
+        }
+
+        
+        .flex1:hover{
+            transform: scaleX(1.2) scaleY(1.1);
+        }
+        .flex1 img{
+            justify-content: center;
+            
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        div .sayyara {
+            width: 400px;
+            height: 300px;
+            border: 2px solid black;
+            border-radius: 13px;
+        }
+         div .karaoke {
+            width: 204px;
+            height: 304px;
+            border: 2px solid black;
+            border-radius: 13px;
+        }
+       .flex-container{
+        background-color:black  ;
+        height: 400px;
+        display: flex;
+        justify-content: space-evenly;
+        
+       }
+       .flex-one,.flex-two,.flex-three,.flex-four{
+        width:200px;
+        height: 300px;
+        background-color: aliceblue;
+        border-radius: 2px solid white;
+        text-align: center;
+        padding: 5px;
+       }
+       .more-reason{
+        background-color: black;
+        color: white;
+        height: 100px;
+        display: flex;
+        text-align: start;
+        margin:0;
+        font-size:30px;
+
+       }
+       /* frq-section */
+       .frq{
+        width:20%;
+        
+    }
+    .frq,.row{
+        display: flex;
+        align-items:center;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .frq,.row,.button{
+        background-color: aliceblue;
+        padding: 30px 50px;
+        width: 95%;
+        font-size: 22px;
+           background-color: black;
+           font-weight:550;
+
+       } 
+      .frq1{
+        background-color: rgb(45,45,45);
+        color: white;
+       width:100%;
+       height: ;
+    }
+
+       </style>
+
+<body>
+
+    <div class="container">
+        <div class="item item-a">
+
+            <img src="./imges/pngwing.com (2).png" class="logo">
+            <div class="translate-area">
+                <div class="select-option">
+                    <img id="translate" src="./imges/translate.png" alt="">
+                    <select>
+                        <option value="All" class="option">English</option>
+                        <option value="All">हिन्दी</option>
+                    </select>
+                </div>
+
+
+
+
+
+
+    <button type="submit" class="button1">Sign In</button>
+
+
+
+
+            </div>
+
+        </div>
+        <div class="item item-b">
+            <h1>
+                Unlimited Movies, TV
+            </h1>
+            <h1>
+                shows and more
+            </h1>
+            <h3>Starts at ₹149. Cancel at any time.</h3>
+            <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
+            <div class="email-section">
+                <input type="email" placeholder="Email  address" class="eml">
+                <button class="bttn">get satrted  </button>
+            </div>
+        </div>
+
+        <div class="trend" >
+            <h1>Trending Now</h1>
+        </div>
+    </div>
+
+    <div class="parent-flex">
+        
+    <div class="flex1">
+     <img src="./imges/saiyaara-et00447951-1752737895.avif" class="sayyara">
+    </div>
+    <div class="flex1">
+    <img src="./imges/Karaoke-4.png" alt="" class="karaoke">
+    </div>
+    <div class="flex1">
+       
+    </div>
+    <div class="flex1">
+        
+    </div>
+    <div class="flex1">
+        
+    </div>
+    <div class="flex1">
+       
+    </div>
+   
+    </div>
+    </div>
+    
+    
+<div>
+
+    
+</div>
+
+<h1 class="more-reason">More reason to join</h1>
+<div class="flex-container">
+        <div class="flex-one">one</div>
+        <div class="flex-two">two</div>
+        <div class="flex-three">three</div>
+        <div class="flex-four">four</div>
+            
+            
+        
+    </div>
+    <!-- frq-section -->
+    <h1>frequantly asked question</h1>
+     <div class="frq">
+        <div class="row">
+            <button class="frq1">What is Netflix?</button>
+            <button class="frq1">How much does netflix cost</button>
+            <button class="frq1">Where can I Netflix watch</button>
+            <button class="frq1">How do I cancel</button>
+            <button class="frq1">where can I watch on Netflix</button>
+            <button class="frq1">is netflix good for kids?</button>
+            
+        </div>
+     </div>
+</body>
+
+</html>
