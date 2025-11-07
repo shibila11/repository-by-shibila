@@ -19,23 +19,23 @@
         .container {
             margin: 0;
             background-image: url(./imges/bg-img.jpg);
-            opacity:100;
-            width:100vw;
+            opacity: 100;
+            width: 100vw;
             height: 120vh;
             background-repeat: no-repeat;
             background-size: cover;
             font-size: large;
-            
+
             display: grid;
             grid-template-columns: 9% auto 9%;
             grid-template-rows: 100px auto 100px;
             grid-template-areas: ". nav ."
                 ". mid ."
                 "lst lst lst";
-          
+
         }
-        
-       
+
+
 
         .item {
             /* background-color: aqua; */
@@ -95,7 +95,7 @@
         }
 
 
-        .button1{
+        .button1 {
             height: 35px;
             background-color: red;
             border-color: transparent;
@@ -180,15 +180,17 @@
             font-size: 16px;
             border-radius: 5px 5px 5px 5px;
             background-color: black;
-            opacity:90%;
+            opacity: 90%;
             border: 0;
 
         }
-        .eml:focus::placeholder{
-            transform: translate(-30px,-10px) scale(0.7);
+
+        .eml:focus::placeholder {
+            transform: translate(-30px, -10px) scale(0.7);
 
         }
-        .eml:focus{
+
+        .eml:focus {
             outline: 2px solid white;
             outline-offset: 2px;
         }
@@ -196,154 +198,229 @@
         .bttn {
             height: 50px;
             border-color: transparent;
-             width:181px;
+            width: 181px;
             font-size: 16px;
             border-radius: 5px 5px 5px 5px;
             border: 0;
 
 
         }
-        .bttn::after{
-            content:">";
-            padding-left:15px;
+
+        .bttn::after {
+            content: ">";
+            padding-left: 15px;
         }
+
         /* trending section */
-        .trend{
+        .trend {
             display: flex;
             flex-direction: row;
             justify-items: flex-start;
-            background-color:indigo;
+            background-color: indigo;
             height: 100px;
-            width: 100vw; 
-            grid-area:lst;
+            width: 100vw;
+            grid-area: lst;
             font-size: 24px;
             border-radius: 49% 49% 0 0;
-            border-top:4px solid red;
-            background: radial-gradient(ellipse at 50% 20%,rgba(255, 255, 255, 0.233) 10%,rgba(0, 0, 0, 0.841) 30%, black 100%       );
-            
+            border-top: 4px solid red;
+            background: radial-gradient(ellipse at 50% 20%, rgba(255, 255, 255, 0.233) 10%, rgba(0, 0, 0, 0.841) 30%, black 100%);
+
 
 
         }
-        /* .trend::before{
-            content:"";
-            position: absolute;
-            inset:0;
-            border:6px solid transparent;
-            border-image:linear-gradient(to right,transparent 0%,red);
-            background-color: transparent ;
-        } */
-        .trend h1{
+
+        .the-secondbox {
+            background-color:rgb(0,0,0);
+            height: fit-content;
+            width: 100vw;
+            display: grid;
+            grid-template-columns: 9% auto 9%;
+            grid-template-rows: auto;
+            grid-template-areas: ". the-first ."
+            ;
+
+        }
+
+        .gridsec-one {
+            display: flex;
+            width: 100%;
+            height: fit-content;
+            overflow:auto;
+            flex-flow: row nowrap;
+            grid-area: the-first;
+            background-color: aqua;
+            justify-content:space-around;
+            border: 0;
+
+         
+        }
+        .gridsec-one::-webkit-scrollbar-button {
+            scrollbar-color: black;
+
+        }
+
+        .posterno-10 {
+            width: 180px;
+            height: 252px;
+            background-color: rgb(22,22,22);
+            flex-basis: 1;
+            flex-shrink: 0;
+            padding: 8px 22px;
+
+        }
+        .posterno-10 img{
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 6px;
+            object-fit: cover;
+            object-position: center;
+            filter: brightness(75%) ;
+
+            
+        }
+        .posterno-10 img:hover{
+            filter: brightness(100%) ;
+            transition: transform 0.5s ,filter 0.5s;
+            transform: scale(1.05);
+        }
+
+        .trend h1 {
             font-size: 25px;
             padding-top: 40px;
-       color: white;
-      transform: translate(-400px ,0 );
+            color: white;
+            transform: translate(-400px, 0);
         }
+
         /* flex-setion */
-         .parent-flex{
-            background-color:black;
+        .parent-flex {
+            background-color: black;
             padding: 30px;
             display: flex;
-            flex-wrap:nowrap;
+            flex-wrap: nowrap;
             /* in row */
-            justify-content:space-around; 
+            justify-content: space-around;
             /* in columns */
-            align-content:space-around;
+            align-content: space-around;
             gap: 50px;
             height: 400px;
             overflow: scroll;
 
 
         }
-        .flex1{
+
+        .flex1 {
             background-color: aliceblue;
-            border:2px solid black;
+            border: 2px solid black;
             width: 100px;
             height: 100px;
             align-content: center;
             padding: 40px;
-             transition: transform 1s;
+            transition: transform 1s;
         }
 
-        
-        .flex1:hover{
+
+        .flex1:hover {
             transform: scaleX(1.2) scaleY(1.1);
         }
-        .flex1 img{
+
+        .flex1 img {
             justify-content: center;
-            
+
         }
-        div{
+
+        div {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
         }
+
         div .sayyara {
             width: 400px;
             height: 300px;
             border: 2px solid black;
             border-radius: 13px;
         }
-         div .karaoke {
+
+        div .karaoke {
             width: 204px;
             height: 304px;
             border: 2px solid black;
             border-radius: 13px;
         }
-       .flex-container{
-        background-color:black  ;
-        height: 400px;
-        display: flex;
-        justify-content: space-evenly;
-        
-       }
-       .flex-one,.flex-two,.flex-three,.flex-four{
-        width:200px;
-        height: 300px;
-        background-color: aliceblue;
-        border-radius: 2px solid white;
-        text-align: center;
-        padding: 5px;
-       }
-       .more-reason{
-        background-color: black;
-        color: white;
-        height: 100px;
-        display: flex;
-        text-align: start;
-        margin:0;
-        font-size:30px;
 
-       }
-       /* frq-section */
-       .frq{
-        width:20%;
-        
-    }
-    .frq,.row{
-        display: flex;
-        align-items:center;
-        flex-direction: column;
-        justify-content: center;
-        
-    }
-    .frq,.row,.button{
-        background-color: aliceblue;
-        padding: 30px 50px;
-        width: 95%;
-        font-size: 22px;
-           background-color: black;
-           font-weight:550;
+        .flex-container {
+            background-color: black;
+            height: 400px;
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
 
-       } 
-      .frq1{
-        background-color: rgb(45,45,45);
-        color: white;
-       width:100%;
-       height: ;
-    }
+        }
 
-       </style>
+        .flex-one,
+        .flex-two,
+        .flex-three,
+        .flex-four {
+            width: 200px;
+            height: 300px;
+            background-color: aliceblue;
+            border-radius: 2px solid white;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .more-reason {
+            background-color: black;
+            color: white;
+            height: 100px;
+            display: flex;
+            text-align: start;
+            margin: 0;
+            font-size: 30px;
+
+        }
+
+        /* frq-section */
+
+        .frq {
+            width: 100vw;
+            display: grid;
+            grid-template-columns: 9vw 82vw 9vw;
+            grid-template-rows: auto;
+            grid-template-areas: ". row ."
+            ;
+            background-color: rgb(0, 0, 0);
+
+
+
+        }
+
+        .row1 {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-items: center;
+            grid-area: row;
+
+        }
+
+        .frq1 {
+            background-color: rgb(47, 204, 107);
+            padding: 30px 50px;
+            width: 95%;
+            font-size: 22px;
+            background-color: rgb(45, 45, 45);
+            font-weight: 550;
+            color: white;
+            text-align: left;
+            border: none;
+
+
+        }
+    </style>
 
 <body>
 
@@ -365,7 +442,7 @@
 
 
 
-    <button type="submit" class="button1">Sign In</button>
+                <button type="submit" class="button1">Sign In</button>
 
 
 
@@ -384,68 +461,59 @@
             <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
             <div class="email-section">
                 <input type="email" placeholder="Email  address" class="eml">
-                <button class="bttn">get satrted  </button>
+                <button class="bttn">get satrted </button>
             </div>
         </div>
 
-        <div class="trend" >
+        <div class="trend">
             <h1>Trending Now</h1>
         </div>
     </div>
 
-    <div class="parent-flex">
-        
-    <div class="flex1">
-     <img src="./imges/saiyaara-et00447951-1752737895.avif" class="sayyara">
-    </div>
-    <div class="flex1">
-    <img src="./imges/Karaoke-4.png" alt="" class="karaoke">
-    </div>
-    <div class="flex1">
-       
-    </div>
-    <div class="flex1">
-        
-    </div>
-    <div class="flex1">
-        
-    </div>
-    <div class="flex1">
-       
-    </div>
-   
-    </div>
-    </div>
-    
-    
-<div>
 
-    
-</div>
+    <div class="the-secondbox">
+        <div class="gridsec-one">
+            <div class="posterno-10"><img src="./imges/saiyaara-et00447951-1752737895.avif" alt=""></div>
+            <div class="posterno-10"><img src="./imges/Karaoke-4.png" alt=""></div>
+            <div class="posterno-10"><img src="" alt=""></div>
+            <div class="posterno-10"><img src="" alt=""></div>
+            <div class="posterno-10"><img src="" alt=""></div>
+            <div class="posterno-10"><img src="" alt=""></div>
+            <div class="posterno-10"><img src="" alt=""></div>
+            <div class="posterno-10"><img src="" alt=""></div>
+            <div class="posterno-10"><img src="" alt=""></div>
+            <div class="posterno-10"><img src="" alt=""></div>
+        </div>
 
-<h1 class="more-reason">More reason to join</h1>
-<div class="flex-container">
+    </div>
+    <!-- <div> -->
+
+
+    <!-- </div> -->
+
+    <h1 class="more-reason">More reason to join</h1>
+    <div class="flex-container">
         <div class="flex-one">one</div>
         <div class="flex-two">two</div>
         <div class="flex-three">three</div>
         <div class="flex-four">four</div>
-            
-            
-        
+
+
+
     </div>
     <!-- frq-section -->
     <h1>frequantly asked question</h1>
-     <div class="frq">
-        <div class="row">
+    <div class="frq">
+        <div class="row1">
             <button class="frq1">What is Netflix?</button>
             <button class="frq1">How much does netflix cost</button>
             <button class="frq1">Where can I Netflix watch</button>
             <button class="frq1">How do I cancel</button>
             <button class="frq1">where can I watch on Netflix</button>
             <button class="frq1">is netflix good for kids?</button>
-            
+
         </div>
-     </div>
+    </div>
 </body>
 
 </html>
